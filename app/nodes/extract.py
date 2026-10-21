@@ -2,10 +2,7 @@ from app.state import GraphState
 from app.llm import extract_with_llm
 
 def extract_node(state: GraphState) -> GraphState:
-    """
-    Node 1: Extract data using LLM.
-    No validation here - just extraction.
-    """
+
     text = state["input_text"]
     state["logs"].append("🔍 Starting extraction...")
 

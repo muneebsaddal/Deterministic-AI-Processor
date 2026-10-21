@@ -1,10 +1,7 @@
-from typing import TypedDict, Optional, List, Any
+from typing import TypedDict, Optional, List
 
 class GraphState(TypedDict):
-    """
-    State that flows through the graph.
-    LangGraph requires TypedDict, not dict subclass.
-    """
+
     input_text: str
     extracted_data: Optional[dict]
     validation_error: Optional[str]

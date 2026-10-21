@@ -3,7 +3,7 @@ from datetime import date
 from typing import Literal
 
 class OrderSchema(BaseModel):
-    """Strict output schema - no extra fields allowed"""
+
     customer_name: str = Field(description="Full name of customer")
     item: str = Field(description="Product name")
     quantity: int = Field(gt=0, description="Number of items ordered")
@@ -12,4 +12,4 @@ class OrderSchema(BaseModel):
     currency: Literal["USD", "EUR", "GBP"] = Field(description="Three-letter currency code")
 
     class Config:
-        extra = "forbid"  # Reject any extra fields
+        extra = "forbid"

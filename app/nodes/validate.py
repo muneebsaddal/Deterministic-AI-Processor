@@ -3,10 +3,7 @@ from app.schemas import OrderSchema
 from pydantic import ValidationError
 
 def validate_node(state: GraphState) -> GraphState:
-    """
-    Node 2: Validate extracted data against schema.
-    Sets validation_error if invalid.
-    """
+
     state["logs"].append("✓ Validating against schema...")
 
     if not state["extracted_data"]:

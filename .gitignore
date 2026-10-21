@@ -1,0 +1,4 @@
+
+# Local configuration and generated runtime files
+__pycache__/
+*.py[cod]
